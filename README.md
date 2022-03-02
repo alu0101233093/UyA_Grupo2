@@ -9,7 +9,7 @@
 
 ## Seminario DCU 
 
-## Entregable
+### Entregable
   En este seminario, se ha tenido que elaborar el siguiente entregable: [Seminario DCU](./Seminario_DCU/Seminario_DCU_Grupo2.pdf)
 
 ### Proceso a seguir 

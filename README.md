@@ -4,8 +4,7 @@
 
 - Eduardo González Pérez            | alu0101319001@ull.edu.es
 - Leonardo Alfonso Cruz Rodrígeuez  | alu0101233093@ull.edu.es
-- Álvaro Rodríguez Gómez            | alu0101
-
+- Álvaro Rodríguez Gómez            | alu0101362953@ull.edu.es
 
 ## Seminario DCU 
 

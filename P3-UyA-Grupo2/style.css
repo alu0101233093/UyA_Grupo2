@@ -65,7 +65,6 @@ a:hover{
   float: right;
   height: auto;
   width: 130px;
-  background-color: red;
-  border-left: transparent;
-  border: black 3px;
+  background-color: rgb(255, 0, 0);
+  border: black solid 3px;
 }

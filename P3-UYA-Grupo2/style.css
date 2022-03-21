@@ -1,0 +1,99 @@
+.background{
+  height: auto;
+  width: 770;
+  border: black solid 3px;
+  background-color: rgb(0, 247, 255);
+  
+  font-family: arial;
+  color: black;
+  font-size: 1.5em;
+}
+
+.up{
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-image: url("./fondoBuscador.jpeg");
+}
+
+ul{
+  list-style-type: none;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+li{
+  display: inline;
+  text-align: center;
+  padding: 0.3em;
+  margin-bottom: 0.7em;
+}
+
+li.up{
+  background-color: violet;
+  display: inline;
+  text-align: center;
+  padding: 0.3em;
+  margin-bottom: 0.7em;
+}
+
+tr{
+
+  border: black solid 3px;
+  background-color: white;
+}
+
+tr.a{
+  color: green;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+p {
+  margin-top: 1.5em;
+}
+
+.bottom{
+  display: flex;
+  height: auto;
+  width: 100%;
+  background-color: rgb(162, 0, 255);
+}
+
+.c1{
+  display: flex;
+  float: left;
+  height: auto;
+  width: 200px;
+  background-color: rgb(255, 238, 0);
+  border: black solid 3px;
+}
+
+.c2{
+  display: flex;
+  float: inline-start;
+  height: 1307px; /*auto*/
+  width: 428px;
+  background-color: rgb(255, 136, 0);
+  border: black solid 3px;
+}
+
+.c3{
+  display: flex;
+  float: right;
+  height: 1307; /*auto*/
+  width: 130px;
+  background-color: red;
+  border-left: solid;
+  border: black solid 3px;
+}

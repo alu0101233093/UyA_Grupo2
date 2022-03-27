@@ -6,3 +6,11 @@ nav .brand-logo {
 .sidenav-trigger {
     color: #26a69a;
 }
+
+.breadcrumb:before {
+  color:purple;
+}
+
+.parallax-container {
+  height: auto;
+}

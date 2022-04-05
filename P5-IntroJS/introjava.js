@@ -143,7 +143,7 @@ function ejer4() {
     sum += aux;
   }
   importUsuario = document.createTextNode(sum.toFixed(2));
-  document.getElementById("ejer52").appendChild(importUsuario);
+  document.getElementById("ejer42").appendChild(importUsuario);
 }
 
 function ejer4aux(nombre) {

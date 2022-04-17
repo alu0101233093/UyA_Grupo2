@@ -1,0 +1,82 @@
+<!DOCTYPE>
+    <html >
+    <head>
+        <title>Ajax; Firebase</title>
+        <script type="text/javascript" src="introjava.js">
+        </script>
+
+    <script >
+
+
+    </script>
+    </head>
+		<body>
+      <div align="center">
+        <h1>Java Script: Ajax; Firebase</h1>
+        <p>AJAX es un acrónimo de Asynchronous JavaScript + XML, que se puede traducir como "JavaScript asíncrono + XML"</p>
+        
+        <form action="https://www.ull.es/" method="post">
+              <p>Puedes introducir tu correo, si quieres suscribirte</p>
+              
+            <div>
+              <div>  
+                <label for="newsletterEdadInput">Nombre</label>
+                <input id="newsletterEdadInput" name="edad" required="" placeholder="you@example.com" size="30">
+              </div>
+              <div>  
+                <label for="newsletterPasswordInput">Password</label>
+                <input id="newsletterPasswordInput" name="password" required="" size="30">
+              </div>
+              <div>
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">Sign up now</button>
+              </div>
+            </div>
+        </form>
+
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "******************",
+            authDomain: "", // Hemos configurado los usuarios para autenticacion en: https://console.firebase.google.com/u/0/project/uya-g2-674ce/authentication/usage/current-billing?hl=es-419
+            databaseURL: "https://uya-g2-674ce-default-rtdb.europe-west1.firebasedatabase.app/",
+            projectId: "*********************",
+            storageBucket: "******************",
+            messagingSenderId: "***************",
+            appId: "***********************"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+
+              //Referencia a la base de datos
+              var database = firebase.database();
+              var referencia = database.ref('usuario3');
+              //Escribir un documento
+              referencia.set({
+                    actividad: 'tutorías',
+                    fecha: '18 de abril',
+                    usuario: 'Isa'
+                });
+              //Consultar datos, se muestran todos los datos en la raíz
+              referencia = database.ref('/');
+              referencia.once('value', snapshot => {
+                console.log(snapshot.val());
+              });
+              //Consultar datos, se muestra la actividad del usuario1
+              referencia = database.ref('/usuario1');
+              referencia.on('value', snapshot => {
+                console.log('_______________________');
+                console.log(snapshot.val().actividad);
+              });
+              //Consultar datos, se accede a la actividad del usuario2
+              referencia = database.ref('/usuario2/actividad');
+              referencia.on('value', snapshot => {
+                console.log('_______________________');
+                console.log(snapshot.val());
+              });
+            </script>
+      </div>
+    </body>
+
+	</html>

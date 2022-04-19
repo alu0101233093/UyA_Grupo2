@@ -8,7 +8,8 @@ $(document).ready(function() {
   });
 
   $("#botonenviar").click(function(){
-    $.getJSON("https://jsonplaceholder.typicode.com/posts/1", function( data ) {
+    $.getJSON("https://jsonplaceholder.typicode.com/users/"+$("#usuarioInput").val(), function( data ) {
+      console.log(data)
       var items = [];
       $.each( data, function( key, val ) {
         items.push( "<li id='" + key + "'>" + val + "</li>" );
@@ -17,7 +18,7 @@ $(document).ready(function() {
       $( "<ul/>", {
         "class": "my-new-list",
         html: items.join( "" )
-      }).appendTo( "body" );
+      }).appendTo( "#incoming" );
     });
 });
 });

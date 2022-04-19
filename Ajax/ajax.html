@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Ajax; Firebase</title>
-    <script type="text/javascript" src="introjava.js"></script>
-  
+ 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -24,17 +23,16 @@
               <label for="newsletterUsuarioInput">Usuario</label>
               <input id="usuarioInput" name="Usuario" required="" size="30">
             </div>
-            <div class="col s12">  
-              <label for="newsletterNotaInput">Nota</label>
-              <input id="newsletterNotaInput" name="Nota" required="" size="30">
-            </div>
             <div class="col s12"> 
               <br>
               <input type="button" id="botonenviar" value="Enviar">
-              <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">Iniciar sesión</button>
               <div class="row">
                 <p id="incoming"></p>
                 <div class="col s4 center push-s4"  id="texto"></div>
+              </div>
+              <div class="row">
+                <p id="incoming"></p>
+                <div class="col s4 center push-s4" id="texto"></div>
               </div>
             </div>
           </div>
@@ -42,7 +40,7 @@
 
       <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
-      <script src="js/firebase.js"></script>
+      <!--<script src="js/firebase.js"></script>-->
     </div>
 
     <!--  Scripts-->

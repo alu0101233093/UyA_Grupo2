@@ -8,7 +8,7 @@ $(document).ready(function() {
   });
 
   $("#botonenviar").click(function(){
-    $.getJSON("https://jsonplaceholder.typicode.com/users/"+$("#usuarioInput").val(), function( data ) {
+    $.getJSON("https://uya-g2-674ce-default-rtdb.europe-west1.firebasedatabase.app/"+$("#usuarioInput").val(), function( data ) {
       console.log(data)
       var items = [];
       $.each( data, function( key, val ) {

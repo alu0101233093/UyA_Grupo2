@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyAuOkcu74iEsSSkI7nxllQZmWVRSTmeWx0",
     authDomain: "uya-g2-674ce.firebaseapp.com	", // uya-g2-674ce.web.app	
     databaseURL: "https://uya-g2-674ce-default-rtdb.europe-west1.firebasedatabase.app/",

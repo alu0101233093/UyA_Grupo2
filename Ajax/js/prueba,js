@@ -1,0 +1,54 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+import * as f from "firebase/database.js";
+
+
+/*myRef.addValueEventListener(new ValueEventListener() {
+  @Override
+  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+      //Getting the string value of that node
+      User user =  dataSnapshot.getValue(User.class);
+      
+      Toast.makeText(MainActivity.this, "Data Received: username: " + user.getUsername(), Toast.LENGTH_SHORT).show();
+
+  }
+
+  @Override
+  public void onCancelled(@NonNull DatabaseError databaseError) {
+      Log.e(TAG, "onCancelled: Something went wrong! Error:" + databaseError.getMessage() );
+
+  }
+});*/
+$('#botonenviar').on("click", function( event ) {  
+// Your web app's Firebase configuration
+console.log("INICIE LA APP");
+  var firebaseConfig = {
+    apiKey: "AIzaSyAuOkcu74iEsSSkI7nxllQZmWVRSTmeWx0",
+    authDomain: "uya-g2-674ce.firebaseapp.com",
+    databaseURL: "https://uya-g2-674ce-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "uya-g2-674ce",
+    storageBucket: "uya-g2-674ce.appspot.com",
+    messagingSenderId: "174249225002",
+    appId: "1:174249225002:web:ccc6bd049342e282984c53",
+    measurementId: "G-ZWMYSP352K"
+  };
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = f.getAnalytics(app);
+  // firebase.initializeApp(firebaseConfig);
+
+  //Referencia a la base de datos
+  var database = getDatabase(app);
+
+  var query = database.ref().child(0);// .child(0).orderByChild(‌​"From").equalTo('2')‌​; 
+  query.on("value", function(snapshot) {
+    console.log(snapshot.key); // this will print HukMessages, because that's the location you queried
+    console.log(snapshot); // this will print HukMessages, because that's the location you queried
+
+    snapshot.forEach(function(child) {
+      console.log(child.key); // this will print the key of a message
+      console.log(child); // this will print the key of a message
+    });
+  });
+  console.log("child.key"); // this will print the key of a message
+});

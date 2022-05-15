@@ -1,0 +1,111 @@
+[
+	{
+    "id": 1,
+		"name": "Rodrigo",
+		"dni": {
+      "number": 92137562,
+      "letter": "B"
+    },
+		"birthday": {
+			"day": 25,
+			"month": 4,
+			"year": 1994
+		},
+    "cuenta": {
+      "IBAN": "ES12",
+      "CCC": 1234123412123456789
+    },
+    "productos": {
+      "leche": {
+        "precio": 0.84,
+        "unidades": 2
+      },
+      "barra de pan": {
+        "precio": 0.55,
+        "unidades": 4
+      },
+      "queso philadelphia": {
+        "precio": 2.09,
+        "unidades": 1
+      },
+      "agua bezoya": {
+        "precio": 0.65,
+        "unidades": 3
+      }
+    },
+    "descuento": 0.05,
+    "pago": "tarjeta"
+	},
+
+	{
+    "id": 2,
+		"name": "Maria",
+		"dni": {
+      "number": 87322112,
+      "letter": "Z"
+    },
+		"birthday": {
+			"day": 4,
+			"month": 12,
+			"year": 1999
+		},
+    "cuenta": {
+      "IBAN": "ES34",
+      "CCC": 9023847615152678398
+    },
+    "productos": {
+      "heineken": {
+        "precio": 0.71,
+        "unidades": 5
+      },
+      "cebolla": {
+        "precio": 2.49,
+        "unidades": 1
+      },
+      "manzana golden": {
+        "precio": 1.49,
+        "unidades": 4
+      },
+      "agua bezoya": {
+        "precio": 0.65,
+        "unidades": 2
+      }
+    },
+    "descuento": 0,
+    "pago": "efectivo"
+	},
+
+  {
+    "id": 3,
+		"name": "Laura",
+		"dni": {
+      "number": 33287745,
+      "letter": "A"
+    },
+		"birthday": {
+			"day": 6,
+			"month": 2,
+			"year": 2001
+		},
+    "cuenta": {
+      "IBAN": "ES90",
+      "CCC": 4313456789233121313
+    },
+    "productos": {
+      "lechuga": {
+        "precio": 1.49,
+        "unidades": 2
+      },
+      "tomate frito": {
+        "precio": 0.41,
+        "unidades": 3
+      },
+      "arroz redondo": {
+        "precio": 1.63,
+        "unidades": 1
+      }
+    },
+    "descuento": 50,
+    "pago": "tarjeta"
+	}
+]

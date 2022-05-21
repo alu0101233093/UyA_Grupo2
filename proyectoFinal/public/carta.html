@@ -14,42 +14,38 @@
   </head>
 
   <body>
-      <div class="row">
+    <nav class="deep-purple" role="navigation">
+      <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo" role="img">Logo</a>
+          <ul class="right hide-on-med-and-down">
+              <li role="listitem"><a href="#" role="link">Login</a>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#" role="link">Register</a>
+        </ul>
+          <ul id="nav-mobile" class="sidenav">
+              <li><a href="#" role="link" aria-hidden="true">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger white-text" role="menuitem"><i class="material-icons">menu</i></a>
+      </div>
+      <div class="nav-wrapper container" role="navigation">
         <div class="col s12">
-          <nav class="deep-purple" role="navigation">
-              <div class="nav-wrapper container">
-                  <a id="logo-container" href="#" class="brand-logo">Logo</a>
-                  <ul class="right hide-on-med-and-down">
-                      <li><a href="#">Login</a>
-                  </ul>
-                  <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Register</a>
-                </ul>
-                  <ul id="nav-mobile" class="sidenav">
-                      <li><a href="#">Login</a></li>
-                  </ul>
-                  <a href="#" data-target="nav-mobile" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
-              </div>
-              <div class="nav-wrapper container">
-                <div class="col s12">
-                  <a href="#!" class ="breadcrumb deep-purple-text lighten-1">Home</a>
-                </div>
-              </div>
-          </nav>
+          <a href="index.html" class ="breadcrumb deep-purple-text lighten-1" role="link">Home</a>
         </div>
       </div>
+    </nav>
 
-      <div align="center">
-        <div class="card">
-          <div class="card-content">
-            <h5>Carta</h5>
-            <p>Conheça nosso cardápio e escolha qual de nossos deliciosos pratos e bebidas você deseja</p>
-          </div>
-          <div class="card-action">
-            <p id="infoCartaDesdeBBDD"></p>
-          </div>
+    <div align="center">
+      <div class="card">
+        <div class="card-content">
+          <h5>Carta</h5>
+          <p>Conheça nosso cardápio e escolha qual de nossos deliciosos pratos e bebidas você deseja</p>
         </div>
-      </div> 
+        <div class="card-action">
+          <p id="infoCartaDesdeBBDD"></p>
+        </div>
+      </div>
+    </div> 
     
   <footer class="page-footer deep-purple">
     <div class="container">

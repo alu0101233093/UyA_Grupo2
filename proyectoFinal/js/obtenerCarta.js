@@ -12,13 +12,12 @@ var firebaseConfig = {
     measurementId: "G-ZWMYSP352K"
   };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-  $(document).ready(function( event ) {  
+$(document).ready(function( event ) {  
 
   console.log(`antes`);
-  const cartaContent = ref(db, 'carta/');
   const dbRef = ref(getDatabase());
   get(child(dbRef, `carta`)).then((snapshot) => {
     if (snapshot.exists()) {

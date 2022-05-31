@@ -77,7 +77,7 @@
             <div class="col s12"> 
               <input type="button" id="botonRegistrarUsuario" value="Registrar">
               <div class="row">
-                <p id="incoming"></p>
+                <p id="feedBackRegistro"></p>
                 <div class="col s4 center push-s4" id="texto"></div>
               </div>
             </div>
@@ -120,9 +120,6 @@
 
     <script type="module">
 
-      //import { getDatabase} from "../node_modules/firebase/database.js";
-      //import { initializeApp } from "../node_modules/firebase/firebase-app";
-      //import { getAnalytics } from "../node_modules/firebase/firebase-analytics";
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
       import { getDatabase, ref, set, onValue, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
 
@@ -143,36 +140,49 @@
       
       // Your web app's Firebase configuration
       $('#botonRegistrarUsuario').on("click", function( event ) {  
-        set(ref(db, 'users/alvaro'), {
-          birthday: {
-            day: 29,
-            month: 9,
-            year: 1994
-          },
-          cuenta: {
-            CCC: 12345678,
-            IBAN: "ES13"
-          },
-          descuento: 0.05,
-          dni: {
-            letter: "B",
-            number: 618394289
-          }, 
-          id: 77,
-          name: "alvaro",
-          pago: "tarjeta",
-          productos: {
-            agua: {
-              precio: 4,
-              unidades: 2
-            },
-            pan: {
-              precio: 2,
-              unidades: 23
-            },
-          }
+        const nombreUsu= $('#nombreUsuario').val();
+        const fechaUsu = $('#fechaUsuario').val();
+        const dniUsu   = $('#DNIusuario').val();
+        if (nombreUsu && fechaUsu && dniUsu) {
 
-        });
+          var datosBancarios;
+          var tipoDePago;
+          if ($('#tarjetaCheck').val()) {
+            const ccc = $('#CCCusuario').val();
+            const iban = $('#IBANusuario').val();
+            if (ccc && iban) {
+              tipoDePago = "tarjeta";
+              datosBancarios = {
+                CCC: ccc,
+                IBAN: iban
+              }
+            } else {
+              $( "<ul/>", {
+                "class": "my-new-list",
+                html: "Faltan datos de tarjeta"
+              }).appendTo( "#feedBackRegistro" );
+            }
+          } else {
+            tipoDePago = "efectivo";
+            datosBancarios = "N/A";
+          }
+          set(ref(db, `users/${nombreUsu}`), {
+            birthday: fechaUsu,
+            cuenta: datosBancarios,
+            dni: dniUsu,
+            name: nombreUsu,
+            pago: tipoDePago
+          });
+          $( "<ul/>", {
+              "class": "my-new-list",
+              html: `Usuario ${nombreUsu} registrado correctamente`
+            }).appendTo( "#feedBackRegistro" );
+        } else {
+          $( "<ul/>", {
+              "class": "my-new-list",
+              html: "Faltan datos personales"
+            }).appendTo( "#feedBackRegistro" );
+        }
       });
 
         $('#botonSolicitar').on("click", function( event ) {  
@@ -190,10 +200,10 @@
                 console.log(val);
                 var value = JSON.stringify(val, null, " ");
                 $.each(val, function( key2, val2) {
-                  items.push( "<li id='" + key2 + "'>" + val2 + "</li>" );
+                  items.push( "<li id='" + key2 + "'>" + key2 + " : " + val2 + "</li>" );
                 });
               } else {
-                items.push( "<li id='" + key + "'>" + val + "</li>" );
+                items.push( "<li id='" + key + "'>" + key + " : " + val + "</li>" );
               }
             });
           

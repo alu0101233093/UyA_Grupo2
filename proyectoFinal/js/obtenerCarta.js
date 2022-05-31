@@ -15,9 +15,7 @@ var firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-$(document).ready(function( event ) {  
-
-  console.log(`antes`);
+$(document).ready(function( event ) {
   const dbRef = ref(getDatabase());
   get(child(dbRef, `carta`)).then((snapshot) => {
     if (snapshot.exists()) {
